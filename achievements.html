@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>சான்றிதழ்கள் - கவிஞர் ம. ராம்பிரபாகர்</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f1a2b;
+            font-family: 'Noto Sans Tamil', serif;
+            color: white;
+        }
+
+        /* Navigation */
+        .nav-container {
+            width: 85%;
+            margin: 25px auto;
+            background-color: #15263d;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 0 15px rgba(0, 140, 255, 0.25);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #dbe4ff;
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #1f3553;
+            color: #4da3ff;
+            box-shadow: 0 0 10px rgba(77, 163, 255, 0.6);
+        }
+
+        /* Page Title */
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 34px;
+            color: #5fa8f5;
+            font-weight: bold;
+        }
+
+        /* Grid Container */
+        .cert-grid {
+            width: 85%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        /* Certificate Card */
+        .cert-card {
+            background-color: #15263d;
+            padding: 20px;
+            border-radius: 18px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(95,168,245,0.15);
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(95,168,245,0.35);
+        }
+
+        .cert-card img {
+    width: 100%;
+    height: auto; 
+    max-height: 430px;   /* auto-resizes to fit */
+    object-fit: contain; /* FULL certificate visible */
+    border-radius: 12px;
+    background-color: #0f1a2b; /* prevents empty black bg */
+    border: 2px solid #2a4b6a;
+    padding: 5px; /* gives space inside card */
+}
+
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .cert-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="index.html">முகப்பு</a></li>
+                <li><a href="mugavurai.html">முகவுரை</a></li>
+                <li><a href="books.html">கவிதைப்புத்தகங்கள்</a></li>
+                <li><a class="active" href="achievements.html">சான்றிதழ்கள்</a></li>
+                <li><a href="awards.html">சிறப்புகள்</a></li>
+                <li><a href="kavithaigal.html">கவிதைகள்</a></li>
+                <li><a href="contact.html">தொடர்புக்கு</a></li>
+            
+
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Title -->
+    <div class="title">சான்றிதழ்கள்</div>
+
+    <!-- Certificate Grid -->
+    <div class="cert-grid">
+
+        <!-- 15 Certificate Images -->
+        <div class="cert-card"><img src="static/cert/1.jpg"></div>
+        <div class="cert-card"><img src="static/cert/2.jpg"></div>
+        <div class="cert-card"><img src="static/cert/3.jpg"></div>
+        <div class="cert-card"><img src="static/cert/4.jpg"></div>
+        <div class="cert-card"><img src="static/cert/5.jpg"></div>
+        <div class="cert-card"><img src="static/cert/7.jpg"></div>
+        <div class="cert-card"><img src="static/cert/8.jpg"></div>
+        <div class="cert-card"><img src="static/cert/9.jpg"></div>
+        <div class="cert-card"><img src="static/cert/10.jpg"></div>
+        <div class="cert-card"><img src="static/cert/11.jpg"></div>
+        <div class="cert-card"><img src="static/cert/12.jpg"></div>
+        <div class="cert-card"><img src="static/cert/13.jpg"></div>
+        <div class="cert-card"><img src="static/cert/14.jpg"></div>
+        <div class="cert-card"><img src="static/cert/15.jpg"></div>
+        <div class="cert-card"><img src="static/cert/16.jpg"></div>
+        <div class="cert-card"><img src="static/cert/17.jpg"></div>
+
+    </div>
+
+</body>
+</html>

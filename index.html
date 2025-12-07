@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>கவிஞர் ம. ராம்பிரபாகர் - முகப்பு</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans Tamil', serif;
+            background-color: #0f1a2b;
+            color: white;
+        }
+
+        .nav-container {
+            width: 85%;
+            margin: 25px auto;
+            background-color: #15263d;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 0 15px rgba(0, 140, 255, 0.25);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #dbe4ff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 8px 15px;
+            display: block;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #1f3553;
+            color: #4da3ff;
+            box-shadow: 0 0 8px rgba(77, 163, 255, 0.6);
+        }
+
+        .home-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 80px;
+            align-items: center;
+        }
+
+        .left {
+            width: 55%;
+        }
+
+        .poem {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .right {
+            width: 40%;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .photo-box img {
+            width: 300px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 4px solid #5fa8f5;
+            box-shadow: 0 0 25px rgba(77, 163, 255, 0.5);
+        }
+
+        /* Floating Instagram Button */
+        .floating-ig {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #ff0069;
+            padding: 14px 18px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 0, 120, 0.6);
+            cursor: pointer;
+            z-index: 999;
+            transition: 0.3s ease;
+        }
+
+        .floating-ig:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 22px rgba(255, 0, 150, 0.9);
+        }
+
+        .ig-icon {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">முகப்பு</a></li>
+                <li><a href="mugavurai.html">முகவுரை</a></li>
+                <li><a href="books.html">கவிதைப்புத்தகங்கள்</a></li>
+                <li><a href="achievements.html">சான்றிதழ்கள்</a></li>
+                <li><a href="awards.html">சிறப்புகள்</a></li>
+                <li><a href="kavithaigal.html">கவிதைகள்</a></li>
+                <li><a href="contact.html">தொடர்புக்கு</a></li>
+               
+
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Home Section -->
+    <section class="home-container">
+
+        <div class="left">
+            <h1>கவிஞர் ம. ராம்பிரபாகர்</h1>
+
+            <p class="poem">
+                வாய்முன்னே வார்த்தையாய்.... <br>
+                கைகளில் எழுத்தாய் .... <br>
+                படிப்போருக்கு இனியதாய்... <br>
+                ஏடுகளில் பதிப்பாய் ...... <br>
+                வந்து அமர வேண்டும் அழகிய கவிதையே.... <br><br>
+
+                கவிதையால் கவர்ந்தது என் மனம் ..... <br>
+                அதை எழுதத் துடிக்கும் என் கைவிரல்..... <br>
+                கவிதையோடு ஒன்றிணைந்த வாழ்வை வாழ…… <br>
+                ஆசை கொண்டது என் உள்ளம்....... 
+            </p>
+        </div>
+
+        <div class="right">
+            <div class="photo-box">
+                <img src="static/personal/1.png" alt="Poet Photo 1">
+            </div>
+            <div class="photo-box">
+                <img src="static/personal/2.png" alt="Poet Photo 2">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Floating Instagram Button -->
+    <a href="https://www.instagram.com/ithayathin_osai?igsh=MWl3NWk2MzZ1M29uNg==" 
+       target="_blank" 
+       class="floating-ig">
+
+        <img src="static/instagram.png" class="ig-icon" alt="Instagram">
+    </a>
+
+</body>
+</html>

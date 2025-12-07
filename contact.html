@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>கவிஞர் ம. ராம்பிரபாகர் - தொடர்புக்கு</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans Tamil', serif;
+            background-color: #0f1a2b;
+            color: #f5f7ff;
+        }
+
+        /* Navigation */
+        .nav-container {
+            width: 85%;
+            margin: 25px auto;
+            background-color: #15263d;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 0 15px rgba(0, 140, 255, 0.25);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #dbe4ff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #1f3553;
+            color: #4da3ff;
+            box-shadow: 0 0 10px rgba(77,163,255,0.7);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            width: 85%;
+            margin: 20px auto 40px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .contact-box {
+            background-color: #121f34;
+            border-radius: 18px;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.45);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #1a2b45, #223959);
+            padding: 15px 20px;
+            margin: 12px 0;
+            border-radius: 14px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 0 12px rgba(77, 163, 255, 0.25);
+            transition: 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 18px rgba(77,163,255,0.5);
+        }
+
+        a.contact-link {
+            text-decoration: none;
+            color: #8ecbff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a.contact-link:hover {
+            color: #b9ddff;
+            text-shadow: 0 0 8px #4da3ff;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .icon {
+            font-size: 32px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 12px #4da3ff;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="index.html">முகப்பு</a></li>
+                <li><a href="mugavurai.html">முகவுரை</a></li>
+                <li><a href="books.html">கவிதைப்புத்தகங்கள்</a></li>
+                <li><a href="achievements.html">சான்றிதழ்கள்</a></li>
+                <li><a href="awards.html">சிறப்புகள்</a></li>
+                <li><a href="kavithaigal.html">கவிதைகள்</a></li>
+                <li><a class="active" href="contact.html">தொடர்புக்கு</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contact Information Box -->
+    <div class="contact-container">
+        <h1 class="page-title">தொடர்புக்கு</h1>
+
+        <div class="contact-box">
+
+            <div class="contact-item">
+                📞 Phone: <a class="contact-link" href="tel:6383835329">6383835329</a>
+            </div>
+
+            <div class="contact-item">
+                📧 Email: <a class="contact-link" href="mailto:kavingarramprabhakar2024tamil@gmail.com">
+                    kavingarramprabhakar2024tamil@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                📸 Instagram:
+                <a class="contact-link" target="_blank"
+                   href="https://www.instagram.com/ithayathin_osai?igsh=MWl3NWk2MzZ1M29uNg==">
+                   ithayathin_osai
+                </a>
+            </div>
+
+            <div class="contact-item">
+                📍 Location: Tiruvadanai, Ramanathapuram
+            </div>
+
+            <div class="contact-item">
+                💬 WhatsApp:
+                <a class="contact-link" href="https://wa.me/6383835329" target="_blank">
+                    Chat on WhatsApp
+                </a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="tel:6383835329"><span class="icon">📞</span></a>
+                <a href="mailto:kavingarramprabhakar2024tamil@gmail.com"><span class="icon">📧</span></a>
+                <a target="_blank" href="https://www.instagram.com/ithayathin_osai"><span class="icon">📸</span></a>
+                <a target="_blank" href="https://wa.me/6383835329"><span class="icon">💬</span></a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
