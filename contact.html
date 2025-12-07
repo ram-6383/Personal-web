@@ -123,6 +123,123 @@
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* ================================
+   MOBILE RESPONSIVE FIXES
+   ================================ */
+
+/* For tablets & small screens */
+@media (max-width: 1024px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .photo-box img {
+        width: 85% !important;
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1, .page-title {
+        font-size: 26px !important;
+    }
+
+    .poem {
+        font-size: 18px !important;
+    }
+
+    /* Awards & Achievements */
+    .award-section, .cert-card {
+        padding: 12px !important;
+    }
+
+    .award-images-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cert-card img {
+        max-height: unset !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Kavithaigal Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .gallery-card img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .role-card {
+        min-height: 50px !important;
+        padding: 12px !important;
+        font-size: 18px !important;
+    }
+
+    .contact-box {
+        padding: 15px !important;
+    }
+
+    .contact-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .contact-item span,
+    .contact-item a {
+        margin-top: 5px;
+    }
+
+    /* Instagram Floating Button */
+    .insta-float {
+        bottom: 15px !important;
+        right: 15px !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 20px !important;
+    }
+}
+
     </style>
 </head>
 
