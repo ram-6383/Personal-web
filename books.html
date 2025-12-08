@@ -26,10 +26,10 @@
 
         nav ul {
             display: flex;
-            list-style: none;
             justify-content: space-around;
-            margin: 0;
+            list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li a {
@@ -45,7 +45,7 @@
         nav ul li a.active {
             background-color: #1f3553;
             color: #4da3ff;
-            box-shadow: 0 0 10px rgba(77, 163, 255, 0.6);
+            box-shadow: 0 0 10px rgba(77,163,255,0.6);
         }
 
         /* Page Title */
@@ -97,7 +97,7 @@
             box-shadow: 0 0 10px rgba(77,163,255,0.7);
         }
 
-        /* Books Grid */
+        /* Grid Title */
         .grid-title {
             text-align: center;
             margin-top: 60px;
@@ -106,19 +106,23 @@
             font-weight: bold;
         }
 
+        /* Books Grid – FIXED FOR LAPTOP (2 × 2 ALWAYS) */
         .books-grid {
             width: 85%;
             margin: 30px auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* ALWAYS 2 COLUMNS IN LAPTOP */
             gap: 35px;
         }
 
         .book-card {
             background-color: #15263d;
             padding: 20px;
+            height: 300px; /* FIXED HEIGHT FOR PERFECT ALIGNMENT */
             border-radius: 15px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: 0.3s;
             box-shadow: 0 0 15px rgba(95,168,245,0.12);
         }
@@ -130,25 +134,23 @@
 
         .book-card img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: contain; /* NO STRETCH */
             border-radius: 12px;
-            object-fit: contain;
             border: 2px solid #2a4b6a;
             padding: 5px;
             background-color: #0f1a2b;
         }
 
-        /* ====================
-            MOBILE FIXES
-        ==================== */
+        /* Medium Screens */
         @media (max-width: 900px) {
             .main-book {
                 width: 70%;
             }
         }
 
+        /* Tablet – still 2 columns */
         @media (max-width: 768px) {
-
             nav ul {
                 flex-direction: column;
                 text-align: center;
@@ -166,47 +168,23 @@
 
             .main-book {
                 width: 90%;
-                padding: 18px;
             }
 
-            .book-title {
-                font-size: 22px;
-            }
-
-            .buy-btn {
-                font-size: 18px;
-                padding: 8px 20px;
-            }
-
-            .grid-title {
-                font-size: 22px;
-            }
-
-            /* Fix irregular grid */
             .books-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr; /* STILL 2 COLUMNS */
                 gap: 15px;
                 width: 95%;
             }
-
-            .book-card {
-                padding: 10px;
-            }
-
-            .book-card img {
-                height: auto;
-                width: 100%;
-            }
         }
 
-        /* Very small phones */
+        /* Mobile – 1 column */
         @media (max-width: 480px) {
             .books-grid {
                 grid-template-columns: 1fr;
             }
 
             .book-card {
-                padding: 12px;
+                height: 260px;
             }
 
             .main-book {
@@ -214,8 +192,8 @@
             }
         }
     </style>
-
 </head>
+
 <body>
 
     <!-- Navigation -->
