@@ -58,7 +58,6 @@
             box-shadow: 0 0 25px rgba(0, 140, 255, 0.15);
         }
 
-        /* Section Title */
         .title {
             text-align: center;
             font-size: 34px;
@@ -67,7 +66,6 @@
             font-weight: bold;
         }
 
-        /* Bullet Points */
         .point {
             margin: 12px 0;
             padding-left: 30px;
@@ -83,20 +81,20 @@
             left: 0;
         }
 
-        /* Highlight Box */
+        /* Highlight Box — FIXED */
         .highlight-box {
-    width: 60%;
-    margin: 15px auto;
-    background-color: #1f3553;
-    padding: 10px 15px;
-    border-left: 4px solid #5fa8f5;
-    font-size: 20px;
-    color: #97c7ff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 8px rgba(95,168,245,0.18);
-}
-
+            width: 60%;
+            max-width: 100%;
+            margin: 15px auto;
+            background-color: #1f3553;
+            padding: 10px 15px;
+            border-left: 4px solid #5fa8f5;
+            font-size: 20px;
+            color: #97c7ff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(95,168,245,0.18);
+        }
 
         /* Subtitle */
         .sub-title {
@@ -109,10 +107,12 @@
             padding-left: 10px;
         }
 
-        /* Table Styling - Centered and Reduced Width */
+        /* Table Container */
         .table-container {
-            width: 60%;
+            width: 70%;
+            max-width: 100%;
             margin: 20px auto;
+            overflow-x: auto;
         }
 
         table {
@@ -135,123 +135,55 @@
         table tr:last-child td {
             border-bottom: none;
         }
-        /* ================================
-   MOBILE RESPONSIVE FIXES
-   ================================ */
 
-/* For tablets & small screens */
-@media (max-width: 1024px) {
-    .home-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
+        /* Mobile Responsive Fix */
+        @media (max-width: 768px) {
 
-    .left, .right {
-        width: 100%;
-    }
+            .nav-container {
+                width: 95%;
+                padding: 10px;
+            }
 
-    .photo-box img {
-        width: 85% !important;
-        height: auto !important;
-        margin-bottom: 20px;
-    }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-}
+            .content {
+                width: 90%;
+                padding: 20px;
+            }
 
-/* For mobile */
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+            .title {
+                font-size: 26px;
+            }
 
-    .nav-container {
-        width: 95%;
-        padding: 10px;
-    }
+            .point {
+                font-size: 18px;
+            }
 
-    h1, .page-title {
-        font-size: 26px !important;
-    }
+            /* FIX: Highlight boxes stay inside */
+            .highlight-box {
+                width: 100%;
+                font-size: 18px;
+                padding: 12px;
+            }
 
-    .poem {
-        font-size: 18px !important;
-    }
+            /* FIX: Table fits mobile */
+            .table-container {
+                width: 100%;
+            }
 
-    /* Awards & Achievements */
-    .award-section, .cert-card {
-        padding: 12px !important;
-    }
+            table td {
+                font-size: 18px;
+                padding: 10px;
+            }
 
-    .award-images-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .cert-card img {
-        max-height: unset !important;
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Kavithaigal Gallery */
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .gallery-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .gallery-card img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .role-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .role-card {
-        min-height: 50px !important;
-        padding: 12px !important;
-        font-size: 18px !important;
-    }
-
-    .contact-box {
-        padding: 15px !important;
-    }
-
-    .contact-item {
-        flex-direction: column !important;
-        text-align: center;
-    }
-
-    .contact-item span,
-    .contact-item a {
-        margin-top: 5px;
-    }
-
-    /* Instagram Floating Button */
-    .insta-float {
-        bottom: 15px !important;
-        right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 20px !important;
-    }
-}
-
+            .sub-title {
+                font-size: 20px;
+            }
+        }
 
     </style>
 </head>
@@ -269,77 +201,46 @@
                 <li><a href="awards.html">சிறப்புகள்</a></li>
                 <li><a href="kavithaigal.html">கவிதைகள்</a></li>
                 <li><a href="contact.html">தொடர்புக்கு</a></li>
-            
-
             </ul>
         </nav>
     </div>
 
-    <!-- Content Card -->
+    <!-- Content -->
     <div class="content">
 
         <div class="title">முகவுரை</div>
 
-        <div class="point">
-            ராம்பிரபாகர் T.கிளியூர், திருவாடானை (வட்டம்), ராமநாதபுரம் (மாவட்டத்தைச்) சேர்ந்தவர்.
-        </div>
+        <div class="point">ராம்பிரபாகர் T.கிளியூர், திருவாடானை (வட்டம்), ராமநாதபுரம் (மாவட்டத்தைச்) சேர்ந்தவர்.</div>
 
-        <div class="point">
-            தமிழ் மீது கொண்ட அளவற்ற பற்றினாலும் கவிதையின் ஈர்ப்பாலும் கவிதை புத்தகங்களை எழுதத் தொடங்கினார்.
-        </div>
+        <div class="point">தமிழ் மீது கொண்ட அளவற்ற பற்றினாலும் கவிதையின் ஈர்ப்பாலும் கவிதை புத்தகங்களை எழுதத் தொடங்கினார்.</div>
 
-        <div class="point">
-            மேலும் தன்னுடைய கவிதை பணியில் இருநூறுக்கும் மேற்பட்ட கவிதைகளை எழுதியுள்ளார்.
-        </div>
+        <div class="point">மேலும் தன்னுடைய கவிதை பணியில் இருநூறுக்கும் மேற்பட்ட கவிதைகளை எழுதியுள்ளார்.</div>
 
-        <!-- Single Book -->
         <div class="sub-title">தனிப்புத்தகம்:</div>
         <div class="highlight-box">எழுத்துக்களின் மெல்லிசை</div>
 
-        <!-- Assistant Books Table -->
         <div class="sub-title">துணை ஆசிரியராக பணியாற்றிய புத்தகங்கள்:</div>
 
         <div class="table-container">
             <table>
-                <tr>
-                    <td>மழலையும் நானும்</td>
-                    <td>இதயமும் நானும்</td>
-                </tr>
-                <tr>
-                    <td>இரவின் நிழல்</td>
-                    <td>வலதும் இடதும்</td>
-                </tr>
-                <tr>
-                    <td>வெண்பனி மலரே</td>
-                    <td>உடன்பிறவா உறவுகள்</td>
-                </tr>
-                <tr>
-                    <td>வாரத்தின் முதல் நாள்</td>
-                    <td>(யாப்பு பதிப்பகம்)</td>
-                </tr>
-                <tr>
-                    <td>என் அழகிய தேவதை(JEC பதிப்பகம்)</td>
-                    <td>எனது அபிமானி (JEC பதிப்பகம்)</td>
-                </tr>
+                <tr><td>மழலையும் நானும்</td><td>இதயமும் நானும்</td></tr>
+                <tr><td>இரவின் நிழல்</td><td>வலதும் இடதும்</td></tr>
+                <tr><td>வெண்பனி மலரே</td><td>உடன்பிறவா உறவுகள்</td></tr>
+                <tr><td>வாரத்தின் முதல் நாள்</td><td>(யாப்பு பதிப்பகம்)</td></tr>
+                <tr><td>என் அழகிய தேவதை(JEC)</td><td>எனது அபிமானி (JEC)</td></tr>
             </table>
         </div>
 
-        <!-- Editor Book -->
         <div class="sub-title">தொகுப்பாளராக பணியாற்றிய புத்தகம்:</div>
         <div class="highlight-box">முகமறியா காதல் (யாப்பு பதிப்பகம்)</div>
         <div class="highlight-box">எழில் கொஞ்சும் இயற்கை (JEC பதிப்பகம்)</div>
 
-        <!-- Extra Points -->
-        <div class="point">
-            கல்லூரியில் வாரிதி முத்தமிழ் மன்றத்தில் துணை கவியரங்கத் தலைவர் மற்றும் துணைத் தலைவராகப் பணியாற்றினார்.
-        </div>
+        <div class="point">கல்லூரியில் வாரிதி முத்தமிழ் மன்றத்தில் துணை கவியரங்கத் தலைவர் மற்றும் துணைத் தலைவராகப் பணியாற்றினார்.</div>
 
-        <div class="point">
-           அமெரிக்கத் தமிழ் ஊடகம் நடத்தும் புத்தகத் திறனாய்வில் திறனாய்வாளராகவும்,தொகுப்பாளராகவும் பணியாற்றியவர்.
+        <div class="point">அமெரிக்கத் தமிழ் ஊடகம் நடத்தும் புத்தகத் திறனாய்வில் திறனாய்வாளராகவும், தொகுப்பாளராகவும் பணியாற்றியவர்.</div>
 
-        <div class="point">
-            பல்வேறு போட்டிகளில் பங்கேற்று பரிசுகளையும் பதக்கங்களையும் பெற்றுள்ளார்.
-        </div>
+        <div class="point">பல்வேறு போட்டிகளில் பங்கேற்று பரிசுகளையும் பதக்கங்களையும் பெற்றுள்ளார்.</div>
+
     </div>
 
 </body>

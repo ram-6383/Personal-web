@@ -6,6 +6,11 @@
     <title>கவிஞர் ம. ராம்பிரபாகர் - சிறப்புகள்</title>
 
     <style>
+        /* Global reset to avoid overflow from padding + width:100% */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -67,30 +72,25 @@
             margin-bottom: 40px;
         }
 
-        .role-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 28px;
-            justify-items: center;
-            margin-top: 25px;
-        }
+       /* Role Cards FIX */
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    gap: 28px;
+    justify-items: center;
+}
 
         .role-card {
-            width: 185px;
-            height: 90px;
-            background: linear-gradient(135deg, #1c2d47, #243c5e);
-            border-radius: 16px;
-            padding: 12px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid transparent;
-            background-clip: padding-box, border-box;
-            background-origin: border-box;
-            box-shadow: 0 0 18px rgba(0, 140, 255, 0.15);
-            transition: 0.35s ease;
-        }
+    width: 100% !important;
+    max-width: 220px;
+    height: auto;
+    min-height: 90px;
+    text-align: center;
+    padding: 15px 10px;
+    background: linear-gradient(135deg, #1c2d47, #243c5e);
+    border-radius: 16px;
+    box-shadow: 0 0 18px rgba(0, 140, 255, 0.15);
+}
 
         .role-card:hover {
             transform: translateY(-6px) scale(1.03);
@@ -109,10 +109,12 @@
         }
 
         .role-card h2 {
-            margin: 0;
-            font-size: 18px;
-            letter-spacing: 0.4px;
-        }
+    margin: 0;
+    font-size: 18px;
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
 
         /* Award Sections */
         .award-section {
@@ -200,172 +202,174 @@
             padding: 5px;
             display: block;
         }
+
         /* Animated Award Table Box */
-.award-table {
-    width: 100%;
-    background: rgba(20, 35, 55, 0.7);
-    border-radius: 14px;
-    padding: 18px 20px;
-    margin-top: 15px;
-    border: 1.5px solid #2a4b6a;
-    box-shadow: 0 0 12px rgba(0, 140, 255, 0.12);
-    transition: 0.35s ease;
-}
+        .award-table {
+            width: 100%;
+            max-width: 100%;
+            background: rgba(20, 35, 55, 0.7);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-top: 15px;
+            border: 1.5px solid #2a4b6a;
+            box-shadow: 0 0 12px rgba(0, 140, 255, 0.12);
+            transition: 0.35s ease;
+        }
 
-/* Hover animation */
-.award-table:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 20px rgba(77, 163, 255, 0.35);
-    border-color: #4da3ff;
-}
+        /* Hover animation */
+        .award-table:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px rgba(77, 163, 255, 0.35);
+            border-color: #4da3ff;
+        }
 
-/* Table List */
-.award-table ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        /* Table List */
+        .award-table ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.award-table ul li {
-    margin: 10px 0;
-    padding-left: 20px;
-    position: relative;
-    font-size: 18px;
-    color: #dfe8ff;
-}
+        .award-table ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 18px;
+            color: #dfe8ff;
+        }
 
-/* custom animated bullet point */
-.award-table ul li::before {
-    content: "🌟";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 18px;
-    color: #4da3ff;
-    animation: glow 1.5s infinite alternate ease-in-out;
-}
+        /* custom animated bullet point */
+        .award-table ul li::before {
+            content: "🌟";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+            color: #4da3ff;
+            animation: glow 1.5s infinite alternate ease-in-out;
+        }
 
-/* Glow animation */
-@keyframes glow {
-    0% { text-shadow: 0 0 4px #4da3ff; }
-    100% { text-shadow: 0 0 12px #82c3ff; }
-}
-/* ================================
-   MOBILE RESPONSIVE FIXES
-   ================================ */
+        /* Glow animation */
+        @keyframes glow {
+            0% { text-shadow: 0 0 4px #4da3ff; }
+            100% { text-shadow: 0 0 12px #82c3ff; }
+        }
 
-/* For tablets & small screens */
-@media (max-width: 1024px) {
-    .home-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
+        /* ================================
+           MOBILE RESPONSIVE FIXES
+           ================================ */
 
-    .left, .right {
-        width: 100%;
-    }
+        /* For tablets & small screens */
+        @media (max-width: 1024px) {
+            .home-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
 
-    .photo-box img {
-        width: 85% !important;
-        height: auto !important;
-        margin-bottom: 20px;
-    }
+            .left, .right {
+                width: 100%;
+            }
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-}
+            .photo-box img {
+                width: 85% !important;
+                height: auto !important;
+                margin-bottom: 20px;
+            }
 
-/* For mobile */
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
 
-    .nav-container {
-        width: 95%;
-        padding: 10px;
-    }
+        /* For mobile */
+        @media (max-width: 768px) {
+            .nav-container {
+                width: 95%;
+                padding: 10px;
+            }
 
-    h1, .page-title {
-        font-size: 26px !important;
-    }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
 
-    .poem {
-        font-size: 18px !important;
-    }
+            .awards-container {
+                width: 92%;
+            }
 
-    /* Awards & Achievements */
-    .award-section, .cert-card {
-        padding: 12px !important;
-    }
+            h1, .page-title {
+                font-size: 26px !important;
+            }
 
-    .award-images-grid {
-        grid-template-columns: 1fr !important;
-    }
+            .poem {
+                font-size: 18px !important;
+            }
 
-    .cert-card img {
-        max-height: unset !important;
-        width: 100% !important;
-        height: auto !important;
-    }
+            .award-section {
+                padding: 15px 12px 18px 12px;
+            }
 
-    /* Kavithaigal Gallery */
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 12px;
-    }
-}
+            .award-table {
+                padding: 14px 12px;
+            }
 
-@media (max-width: 480px) {
+            .award-images-grid {
+                grid-template-columns: 1fr !important;
+            }
 
-    .gallery-grid {
-        grid-template-columns: 1fr !important;
-    }
+            .cert-card img {
+                max-height: unset !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
 
-    .gallery-card img {
-        width: 100% !important;
-        height: auto !important;
-    }
+        @media (max-width: 480px) {
 
-    .role-grid {
-        grid-template-columns: 1fr !important;
-    }
+            .role-grid {
+                grid-template-columns: 1fr !important;
+            }
 
-    .role-card {
-        min-height: 50px !important;
-        padding: 12px !important;
-        font-size: 18px !important;
-    }
+            .role-card {
+                min-height: 50px !important;
+                padding: 12px !important;
+                font-size: 18px !important;
+            }
 
-    .contact-box {
-        padding: 15px !important;
-    }
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+            }
 
-    .contact-item {
-        flex-direction: column !important;
-        text-align: center;
-    }
+            .gallery-card img {
+                width: 100% !important;
+                height: auto !important;
+            }
 
-    .contact-item span,
-    .contact-item a {
-        margin-top: 5px;
-    }
+            .contact-box {
+                padding: 15px !important;
+            }
 
-    /* Instagram Floating Button */
-    .insta-float {
-        bottom: 15px !important;
-        right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 20px !important;
-    }
-}
+            .contact-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .contact-item span,
+            .contact-item a {
+                margin-top: 5px;
+            }
+
+            .insta-float {
+                bottom: 15px !important;
+                right: 15px !important;
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 20px !important;
+            }
+        }
 
     </style>
 </head>
@@ -383,12 +387,11 @@
                 <li><a class="active" href="awards.html">சிறப்புகள்</a></li>
                 <li><a href="kavithaigal.html">கவிதைகள்</a></li>
                 <li><a href="contact.html">தொடர்புக்கு</a></li>
-               
-
             </ul>
         </nav>
     </div>
-<div class="awards-container">
+
+    <div class="awards-container">
 
         <h1 class="page-title">சிறப்புகள் & சாதனைகள்</h1>
 
@@ -418,151 +421,154 @@
 
             </div>
         </section>
-    <div class="awards-container">
-        <h1 class="page-title">சிறப்புகள் & சாதனைகள்</h1>
 
-        <!-- Award 1 -->
-        <section class="award-section">
-            <div class="award-header">
-                <h2 class="award-title">சிறப்பு 1 — அமெரிக்க புத்தகத் திறனாய்வு</h2>
+        <div class="awards-container">
+            <h1 class="page-title">சிறப்புகள் & சாதனைகள்</h1>
+
+            <!-- Award 1 -->
+            <section class="award-section">
+                <div class="award-header">
+                    <h2 class="award-title">சிறப்பு 1 — அமெரிக்க புத்தகத் திறனாய்வு</h2>
+                    <p class="award-subtext">
+                        அமெரிக்க தமிழ் ஊடகம் நடத்தும் புத்தகத் திறனாய்வு நிகழ்வில் திறனாய்வாளராக பங்களிப்பு.
+                    </p>
+                </div>
+
+                <p class="award-subtext">திறனாய்வு செய்த புத்தகங்கள்:</p>
+
+                <div class="book-review-grid">
+                    <div class="book-card">
+                        <h3>அக்னி சிறகுகள்</h3>
+                        <a class="watch-btn" target="_blank"
+                           href="https://www.youtube.com/live/aPxZ0QwQBnI?si=QEpzyeBvBgvDo-Md">
+                            பார்க்க (Watch Now)
+                        </a>
+                    </div>
+
+                    <div class="book-card">
+                        <h3>கிராமம் நகரம் மாநகரம்</h3>
+                        <a class="watch-btn" target="_blank"
+                           href="https://www.youtube.com/live/A0K4Y9OdqLg?si=LhJOlqASP6i9lBCA">
+                            பார்க்க (Watch Now)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flyers / images for Award 1 -->
+                <div class="award-images-grid">
+                    <div class="cert-card">
+                        <img src="static/awards/1.jpg" alt="அமெரிக்க புத்தகத் திறனாய்வு பிளையர் 1">
+                    </div>
+                    <div class="cert-card">
+                        <img src="static/awards/2.jpg" alt="அமெரிக்க புத்தகத் திறனாய்வு பிளையர் 2">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Award 2 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 2 — Chennai Got Talent</h2>
                 <p class="award-subtext">
-                    அமெரிக்க தமிழ் ஊடகம் நடத்தும் புத்தகத் திறனாய்வு நிகழ்வில் திறனாய்வாளராக பங்களிப்பு.
+                    சென்னையில் நடத்தப்பட்ட கவிதைப் போட்டியில் சிறப்பு குறிப்பிடல் பிரிவில் பரிசும் சான்றிதழும் பெற்றார்.
                 </p>
-            </div>
 
-            <p class="award-subtext">திறனாய்வு செய்த புத்தகங்கள்:</p>
-
-            <div class="book-review-grid">
-                <div class="book-card">
-                    <h3>அக்னி சிறகுகள்</h3>
-                    <a class="watch-btn" target="_blank"
-                       href="https://www.youtube.com/live/aPxZ0QwQBnI?si=QEpzyeBvBgvDo-Md">
-                        பார்க்க (Watch Now)
-                    </a>
+                <div class="award-images-grid">
+                    <div class="cert-card">
+                        <img src="static/awards/3.jpg" alt="Chennai Got Talent சான்றிதழ் 1">
+                    </div>
+                    <div class="cert-card">
+                        <img src="static/awards/4.jpg" alt="Chennai Got Talent சான்றிதழ் 2">
+                    </div>
                 </div>
+            </section>
 
-                <div class="book-card">
-                    <h3>கிராமம் நகரம் மாநகரம்</h3>
-                    <a class="watch-btn" target="_blank"
-                       href="https://www.youtube.com/live/A0K4Y9OdqLg?si=LhJOlqASP6i9lBCA">
-                        பார்க்க (Watch Now)
-                    </a>
+            <!-- Award 3 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 3 — ராஜலட்சுமி பொறியியல் கல்லூரி</h2>
+
+                <div class="award-table">
+                    <ul>
+                        <li>ராஜலட்சுமி பொறியியல் கல்லூரியில் நடத்தப்பட்ட கவிதைப் போட்டியில் <strong>இரண்டாம் பரிசு</strong>.</li>
+                        <li><strong>RECHARGE – 25</strong> நிகழ்வின் ஒரு பகுதியாக.</li>
+                        <li><strong>கவிப் போமா</strong> நிகழ்வில் கவிதை வழங்கி விருது பெற்றார்.</li>
+                    </ul>
                 </div>
-            </div>
+            </section>
 
-            <!-- Flyers / images for Award 1 -->
-            <div class="award-images-grid">
-                <div class="cert-card">
-                    <img src="static/awards/1.jpg" alt="அமெரிக்க புத்தகத் திறனாய்வு பிளையர் 1">
+            <!-- Award 4 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 4 — சாய் ராம் பொறியியல் கல்லூரி</h2>
+
+                <div class="award-table">
+                    <ul>
+                        <li>சாய்ராம் பொறியியல் கல்லூரியில் நடத்தப்பட்ட கவிதைப் போட்டியில் <strong>மூன்றாம் பரிசு</strong>.</li>
+                        <li><strong>CONVERGENCE – 2024</strong> நிகழ்வில் கவிதை வழங்கி விருது பெற்றார்.</li>
+                    </ul>
                 </div>
-                <div class="cert-card">
-                    <img src="static/awards/2.jpg" alt="அமெரிக்க புத்தகத் திறனாய்வு பிளையர் 2">
+            </section>
+
+            <!-- Award 5 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 5 — ராஜலட்சுமி தொழில்நுட்பக் கல்லூரி</h2>
+
+                <div class="award-table">
+                    <ul>
+                        <li>
+                            ராஜலட்சுமி தொழில்நுட்பக் கல்லூரியில் நடத்தப்பட்ட கவிதைப் போட்டியில்
+                            <strong>இரண்டாம் பரிசு</strong> பெற்றுள்ளார்.
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Award 2 -->
-        <section class="award-section">
-            <h2 class="award-title">சிறப்பு 2 — Chennai Got Talent</h2>
-            <p class="award-subtext">
-                சென்னையில் நடத்தப்பட்ட கவிதைப் போட்டியில் சிறப்பு குறிப்பிடல் பிரிவில் பரிசும் சான்றிதழும் பெற்றார்.
-            </p>
+            <!-- Award 6 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 6 — பெருமிதச் செல்வன் விருது</h2>
+                <ul class="award-list">
+                    <li>
+                        பனிமலர் பொறியியல் கல்லூரியில் தமிழக அரசாங்கத்தால் நடத்தப்பட்ட
+                        <strong>மாபெரும் தமிழ் கனவு நிகழ்வில்</strong> சிறப்பாக பேச்சு உரையாற்றியதற்காக
+                        <strong>பெருமிதச் செல்வன்</strong> விருது வழங்கப்பட்டது.
+                    </li>
+                </ul>
 
-            <div class="award-images-grid">
-                <div class="cert-card">
-                    <img src="static/awards/3.jpg" alt="Chennai Got Talent சான்றிதழ் 1">
+                <div class="award-images-grid">
+                    <div class="cert-card">
+                        <img src="static/awards/5.jpg" alt="பெருமிதச் செல்வன் விருது">
+                    </div>
                 </div>
-                <div class="cert-card">
-                    <img src="static/awards/4.jpg" alt="Chennai Got Talent சான்றிதழ் 2">
+            </section>
+
+            <!-- Award 7 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 7 — RIT - YATRA 2024</h2>
+                <ul class="award-list">
+                    <li>ராஜலட்சுமி தொழில்நுட்பக் கல்லூரியில் நடத்தப்பட்ட
+                        <strong>YATRA - 2024</strong> நிகழ்வின் ஒரு பகுதியாக நடந்த கவிதைப் போட்டியில்
+                        <strong>முதல் பரிசு</strong> பெற்றார்.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Award 8 -->
+            <section class="award-section">
+                <h2 class="award-title">சிறப்பு 8 — RIT - 79வது சுதந்திர தினம்</h2>
+                <ul class="award-list">
+                    <li>
+                        ராஜலட்சுமி தொழில்நுட்பக் கல்லூரியில்
+                        <strong>79வது சுதந்திர தினத்தை</strong> முன்னிட்டு நடத்தப்பட்ட
+                        கவிதைப் போட்டியில் <strong>முதல் பரிசு</strong> பெற்றார்.
+                    </li>
+                </ul>
+
+                <div class="award-images-grid">
+                    <div class="cert-card">
+                        <img src="static/awards/6.jpg" alt="RIT Independence Day Award">
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-       <!-- Award 3 -->
-<section class="award-section">
-    <h2 class="award-title">சிறப்பு 3 — ராஜலட்சுமி பொறியியல் கல்லூரி</h2>
-
-    <div class="award-table">
-        <ul>
-            <li>ராஜலட்சுமி பொறியியல் கல்லூரியில் நடத்தப்பட்ட கவிதைப் போட்டியில் <strong>இரண்டாம் பரிசு</strong>.</li>
-            <li><strong>RECHARGE – 25</strong> நிகழ்வின் ஒரு பகுதியாக.</li>
-            <li><strong>கவிப் போமா</strong> நிகழ்வில் கவிதை வழங்கி விருது பெற்றார்.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Award 4 -->
-<section class="award-section">
-    <h2 class="award-title">சிறப்பு 4 — சாய் ராம் பொறியியல் கல்லூரி</h2>
-
-    <div class="award-table">
-        <ul>
-            <li>சாய்ராம் பொறியியல் கல்லூரியில் நடத்தப்பட்ட கவிதைப் போட்டியில் <strong>மூன்றாம் பரிசு</strong>.</li>
-            <li><strong>CONVERGENCE – 2024</strong> நிகழ்வில் கவிதை வழங்கி விருது பெற்றார்.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Award 5 -->
-<section class="award-section">
-    <h2 class="award-title">சிறப்பு 5 — ராஜலட்சுமி தொழில்நுட்பக் கல்லூரி</h2>
-
-    <div class="award-table">
-        <ul>
-            <li>
-                ராஜலட்சுமி தொழில்நுட்பக் கல்லூரியில் நடத்தப்பட்ட கவிதைப் போட்டியில்
-                <strong>இரண்டாம் பரிசு</strong> பெற்றுள்ளார்.
-            </li>
-        </ul>
-    </div>
-</section>
-
-
-        <!-- Award 6 -->
-        <section class="award-section">
-            <h2 class="award-title">சிறப்பு 6 — பெருமிதச் செல்வன் விருது</h2>
-            <ul class="award-list">
-                <li>
-                    பனிமலர் பொறியியல் கல்லூரியில் தமிழக அரசாங்கத்தால் நடத்தப்பட்ட 
-                    <strong>மாபெரும் தமிழ் கனவு நிகழ்வில்</strong> சிறப்பாக பேச்சு உரையாற்றியதற்காக 
-                    <strong>பெருமிதச் செல்வன்</strong> விருது வழங்கப்பட்டது.
-                </li>
-            </ul>
-
-            <div class="award-images-grid">
-                <div class="cert-card">
-                    <img src="static/awards/5.jpg" alt="பெருமிதச் செல்வன் விருது">
-                </div>
-            </div>
-        </section>
-<!-- Award 7 -->
-<section class="award-section">
-    <h2 class="award-title">சிறப்பு 7 — RIT - YATRA 2024</h2>
-    <ul class="award-list">
-        <li>ராஜலட்சுமி தொழில்நுட்பக் கல்லூரியில் நடத்தப்பட்ட 
-            <strong>YATRA - 2024</strong> நிகழ்வின் ஒரு பகுதியாக நடந்த கவிதைப் போட்டியில் 
-            <strong>முதல் பரிசு</strong> பெற்றார்.
-        </li>
-    </ul>
-</section>
-<!-- Award 8 -->
-<section class="award-section">
-    <h2 class="award-title">சிறப்பு 8 — RIT - 79வது சுதந்திர தினம்</h2>
-    <ul class="award-list">
-        <li>
-            ராஜலட்சுமி தொழில்நுட்பக் கல்லூரியில் 
-            <strong>79வது சுதந்திர தினத்தை</strong> முன்னிட்டு நடத்தப்பட்ட 
-            கவிதைப் போட்டியில் <strong>முதல் பரிசு</strong> பெற்றார்.
-        </li>
-    </ul>
-
-    <div class="award-images-grid">
-        <div class="cert-card">
-            <img src="static/awards/6.jpg" alt="RIT Independence Day Award">
         </div>
-    </div>
-</section>
-
     </div>
 
 </body>

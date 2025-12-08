@@ -66,7 +66,6 @@
             max-width: 600px;
             margin: auto;
             box-shadow: 0 0 20px rgba(0,0,0,0.45);
-            animation: fadeIn 1s ease-in-out;
         }
 
         .contact-item {
@@ -77,21 +76,19 @@
             font-size: 20px;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0 0 12px rgba(77, 163, 255, 0.25);
-            transition: 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 18px rgba(77,163,255,0.5);
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            word-break: break-word;
         }
 
         a.contact-link {
             text-decoration: none;
             color: #8ecbff;
             font-weight: bold;
-            transition: 0.3s;
+            max-width: 100%;
+            word-break: break-all;
         }
 
         a.contact-link:hover {
@@ -118,128 +115,41 @@
             text-shadow: 0 0 12px #4da3ff;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .nav-container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .contact-box {
+                padding: 20px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                font-size: 18px;
+                gap: 5px;
+                text-align: center;
+            }
         }
-        /* ================================
-   MOBILE RESPONSIVE FIXES
-   ================================ */
 
-/* For tablets & small screens */
-@media (max-width: 1024px) {
-    .home-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 26px;
+            }
 
-    .left, .right {
-        width: 100%;
-    }
-
-    .photo-box img {
-        width: 85% !important;
-        height: auto !important;
-        margin-bottom: 20px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-}
-
-/* For mobile */
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .nav-container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    h1, .page-title {
-        font-size: 26px !important;
-    }
-
-    .poem {
-        font-size: 18px !important;
-    }
-
-    /* Awards & Achievements */
-    .award-section, .cert-card {
-        padding: 12px !important;
-    }
-
-    .award-images-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .cert-card img {
-        max-height: unset !important;
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Kavithaigal Gallery */
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .gallery-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .gallery-card img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .role-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .role-card {
-        min-height: 50px !important;
-        padding: 12px !important;
-        font-size: 18px !important;
-    }
-
-    .contact-box {
-        padding: 15px !important;
-    }
-
-    .contact-item {
-        flex-direction: column !important;
-        text-align: center;
-    }
-
-    .contact-item span,
-    .contact-item a {
-        margin-top: 5px;
-    }
-
-    /* Instagram Floating Button */
-    .insta-float {
-        bottom: 15px !important;
-        right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 20px !important;
-    }
-}
-
+            .contact-item {
+                padding: 12px;
+                font-size: 17px;
+            }
+        }
     </style>
 </head>
 
@@ -256,7 +166,6 @@
                 <li><a href="awards.html">சிறப்புகள்</a></li>
                 <li><a href="kavithaigal.html">கவிதைகள்</a></li>
                 <li><a class="active" href="contact.html">தொடர்புக்கு</a></li>
-
             </ul>
         </nav>
     </div>
@@ -268,11 +177,13 @@
         <div class="contact-box">
 
             <div class="contact-item">
-                📞 Phone: <a class="contact-link" href="tel:6383835329">6383835329</a>
+                📞 Phone:
+                <a class="contact-link" href="tel:6383835329">6383835329</a>
             </div>
 
             <div class="contact-item">
-                📧 Email: <a class="contact-link" href="mailto:kavingarramprabhakar2024tamil@gmail.com">
+                📧 Email:
+                <a class="contact-link" href="mailto:kavingarramprabhakar2024tamil@gmail.com">
                     kavingarramprabhakar2024tamil@gmail.com
                 </a>
             </div>
@@ -280,13 +191,14 @@
             <div class="contact-item">
                 📸 Instagram:
                 <a class="contact-link" target="_blank"
-                   href="https://www.instagram.com/ithayathin_osai?igsh=MWl3NWk2MzZ1M29uNg==">
+                   href="https://www.instagram.com/ithayathin_osai">
                    ithayathin_osai
                 </a>
             </div>
 
             <div class="contact-item">
-                📍 Location: Tiruvadanai, Ramanathapuram
+                📍 Location:
+                Tiruvadanai, Ramanathapuram
             </div>
 
             <div class="contact-item">
@@ -300,8 +212,8 @@
             <div class="social-icons">
                 <a href="tel:6383835329"><span class="icon">📞</span></a>
                 <a href="mailto:kavingarramprabhakar2024tamil@gmail.com"><span class="icon">📧</span></a>
-                <a target="_blank" href="https://www.instagram.com/ithayathin_osai"><span class="icon">📸</span></a>
-                <a target="_blank" href="https://wa.me/6383835329"><span class="icon">💬</span></a>
+                <a href="https://www.instagram.com/ithayathin_osai" target="_blank"><span class="icon">📸</span></a>
+                <a href="https://wa.me/6383835329" target="_blank"><span class="icon">💬</span></a>
             </div>
 
         </div>

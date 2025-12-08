@@ -14,7 +14,7 @@
             color: #f5f7ff;
         }
 
-        /* Navigation (same as all pages) */
+        /* Navigation */
         .nav-container {
             width: 85%;
             margin: 25px auto;
@@ -55,158 +55,86 @@
             margin-bottom: 25px;
         }
 
-        /* Gallery Grid */
-       /* Gallery Grid – 3 Columns */
-.gallery-container {
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* FIXED 3 COLUMNS */
-    gap: 30px;
-    padding-bottom: 40px;
-}
+        /* Gallery Container (Default: Desktop - 3 columns) */
+        .gallery-container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding-bottom: 40px;
+        }
 
-/* Gallery Cards – Bigger & Premium */
-.gallery-card {
-    background-color: #121f34;
-    border-radius: 20px;
-    padding: 12px;
-    border: 1px solid #2a4b6a;
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
-    transition: 0.3s ease-in-out;
-}
+        /* Gallery Card */
+        .gallery-card {
+            background-color: #121f34;
+            border-radius: 20px;
+            padding: 12px;
+            border: 1px solid #2a4b6a;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+            transition: 0.3s ease-in-out;
+        }
 
-.gallery-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(77,163,255,0.7);
-}
+        .gallery-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(77,163,255,0.7);
+        }
 
-/* Images Auto Resize Beautifully */
-.gallery-card img {
-    width: 100%;
-    max-height: 550px;   /* BIGGER images */
-    object-fit: contain;
-    background-color: #0f1a2b;
-    padding: 10px;
-    border-radius: 14px;
-    border: 2px solid #2a4b6a;
-}
-/* ================================
-   MOBILE RESPONSIVE FIXES
-   ================================ */
+        /* Images */
+        .gallery-card img {
+            width: 100%;
+            max-height: 550px;
+            object-fit: contain;
+            background-color: #0f1a2b;
+            padding: 10px;
+            border-radius: 14px;
+            border: 2px solid #2a4b6a;
+        }
 
-/* For tablets & small screens */
-@media (max-width: 1024px) {
-    .home-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
+        /* ================================
+           RESPONSIVE FIXED HERE
+           ================================ */
 
-    .left, .right {
-        width: 100%;
-    }
+        /* Tablets → 2 Columns */
+        @media (max-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
 
-    .photo-box img {
-        width: 85% !important;
-        height: auto !important;
-        margin-bottom: 20px;
-    }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-}
+        /* Mobiles → 1 Column */
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                width: 94%;
+            }
 
-/* For mobile */
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+            .nav-container {
+                width: 94%;
+                padding: 10px;
+            }
 
-    .nav-container {
-        width: 95%;
-        padding: 10px;
-    }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
 
-    h1, .page-title {
-        font-size: 26px !important;
-    }
+            .page-title {
+                font-size: 26px;
+            }
 
-    .poem {
-        font-size: 18px !important;
-    }
-
-    /* Awards & Achievements */
-    .award-section, .cert-card {
-        padding: 12px !important;
-    }
-
-    .award-images-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .cert-card img {
-        max-height: unset !important;
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Kavithaigal Gallery */
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .gallery-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .gallery-card img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .role-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .role-card {
-        min-height: 50px !important;
-        padding: 12px !important;
-        font-size: 18px !important;
-    }
-
-    .contact-box {
-        padding: 15px !important;
-    }
-
-    .contact-item {
-        flex-direction: column !important;
-        text-align: center;
-    }
-
-    .contact-item span,
-    .contact-item a {
-        margin-top: 5px;
-    }
-
-    /* Instagram Floating Button */
-    .insta-float {
-        bottom: 15px !important;
-        right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 20px !important;
-    }
-}
+            .gallery-card img {
+                max-height: 450px;
+            }
+        }
 
     </style>
 </head>
@@ -222,19 +150,17 @@
                 <li><a href="books.html">கவிதைப்புத்தகங்கள்</a></li>
                 <li><a href="achievements.html">சான்றிதழ்கள்</a></li>
                 <li><a href="awards.html">சிறப்புகள்</a></li>
-                <li><a href="kavithaigal.html">கவிதைகள்</a></li>
-                <li><a class="active" href="contact.html">தொடர்புக்கு</a></li>
-                
+                <li><a class="active" href="kavithaigal.html">கவிதைகள்</a></li>
+                <li><a href="contact.html">தொடர்புக்கு</a></li>
             </ul>
         </nav>
     </div>
 
     <h1 class="page-title">என்னுடைய ஒருசில கவிதைகள்</h1>
 
-    <!-- Image Gallery -->
+    <!-- Gallery -->
     <div class="gallery-container">
 
-        <!-- 10 images -->
         <div class="gallery-card"><img src="static/kavithaigal/1.jpg"></div>
         <div class="gallery-card"><img src="static/kavithaigal/2.jpg"></div>
         <div class="gallery-card"><img src="static/kavithaigal/3.jpg"></div>
